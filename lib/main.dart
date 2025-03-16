@@ -101,12 +101,152 @@ class HomePage extends StatelessWidget {
               ),
 
               // Category
+              SizedBox(height: 20),
+              Row(
+                children: [
+                  Text(
+                    "Category",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(width: 15),
+                  Container(
+                    height: 48,
+                    width: 48,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Color(0xffDBECF6),
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white, width: 3),
+                    ),
+                    child: Image.asset("assets/document.png"),
+                  ),
+                  SizedBox(width: 10),
+                  Container(
+                    height: 48,
+                    width: 48,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Color(0xffE7E2F3),
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white, width: 3),
+                    ),
+                    child: Image.asset("assets/calendar.png"),
+                  ),
+                  SizedBox(width: 10),
+                  Container(
+                    height: 48,
+                    width: 48,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Color(0xffFEF5D3),
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white, width: 3),
+                    ),
+                    child: Image.asset("assets/trophy.png"),
+                  ),
+                ],
+              ),
 
               // Date & Time
+              SizedBox(height: 20),
+              Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Date",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        CupertinoButton(
+                          color: Colors.white,
+                          onPressed: () {},
+                          child: Row(
+                            children: [
+                              Text(
+                                "Date",
+                                style: TextStyle(
+                                  color: Color(0xff1B1B1D),
+                                  fontSize: 18,
+                                ),
+                              ),
+                              Spacer(),
+                              Icon(
+                                Icons.calendar_month,
+                                color: Color(0xff1B1B1D),
+                                size: 26,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 15),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Time",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        CupertinoButton(
+                          color: Colors.white,
+                          onPressed: () {},
+                          child: Row(
+                            children: [
+                              Text(
+                                "Time",
+                                style: TextStyle(
+                                  color: Color(0xff1B1B1D),
+                                  fontSize: 18,
+                                ),
+                              ),
+                              Spacer(),
+                              Icon(
+                                CupertinoIcons.clock,
+                                color: Color(0xff1B1B1D),
+                                size: 26,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
 
               // Note
 
               // Button
+              Spacer(),
+              CupertinoButton(
+                color: Color(0xff4A3780),
+                borderRadius: BorderRadius.circular(50),
+                onPressed: () {},
+                child: Center(
+                  child: Text(
+                    "Save",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
